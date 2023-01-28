@@ -38,7 +38,7 @@ const SingleTodo: React.FC<Props> = ({ todo, todos, setTodos }) => {
   return (
     <>
       <form  onSubmit={(e) => handleEdit(e, todo.id)} className="mx-auto mt-4 bg-green-600 rounded w-60">
-      <div className="flex py-1 text-lg place-content-between">
+      <div className="flex mt-10 py-1 text-lg place-content-between">
       {edit ? (
       
             <input
@@ -48,9 +48,16 @@ const SingleTodo: React.FC<Props> = ({ todo, todos, setTodos }) => {
              
             />
           ) : todo.isDone ? (
-            <s className="ml-2 text-gray-900">{todo.todo}</s>
+            <div className="relative">
+              <s className="ml-2 text-gray-900">{todo.todo}</s>
+              <img className="absolute left-[220px] top-[-35px] p-1" src="./img/done.png" />
+            </div>
           ) : (
-            <span className="ml-2">{todo.todo}</span>
+            <div className="ml-2 relative">
+              <span>{todo.todo}</span>
+              <img className="absolute top-[-27px] left-[-25px]" src="./img/waiting.png" />
+            </div>
+            
           )}
        
 
