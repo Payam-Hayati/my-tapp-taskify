@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
+*:focus {
+  outline: none;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-2xl font-bold;
+  }
+  body {
+    @apply bg-gray-800 text-gray-50;
+    font-family: "Roboto Condensed", sans-serif;
+  }
+}
+
+@layer components {
+  .container {
+    @apply py-4 mx-auto;
+  }
+
+  .inp-get-task {
+    @apply px-4 py-2 text-gray-800 rounded-lg shadow-lg;
+  }
+
+  .btn-go {
+    @apply absolute w-12 h-12  transition-all bg-blue-500 rounded-full right-10 bottom-[-3px] text-gray-50 hover:bg-slate-50 hover:text-blue-500 hover:font-bold hover:border hover:border-sky-500;
+  }
+}
