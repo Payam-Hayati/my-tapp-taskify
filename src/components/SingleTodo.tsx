@@ -50,12 +50,12 @@ const SingleTodo: React.FC<Props> = ({ todo, todos, setTodos }) => {
           ) : todo.isDone ? (
             <div className="relative">
               <s className="ml-2 text-gray-900">{todo.todo}</s>
-              <img className="absolute left-[220px] top-[-35px] p-1" src="./img/done.png" />
+              <img className="absolute left-[220px] top-[-35px] p-1" src="./img/done.png" alt="done" />
             </div>
           ) : (
             <div className="ml-2 relative">
               <span>{todo.todo}</span>
-              <img className="absolute top-[-27px] left-[-25px]" src="./img/waiting.png" />
+              <img className="absolute top-[-27px] left-[-25px]" src="./img/waiting.png" alt="clock" />
             </div>
             
           )}
